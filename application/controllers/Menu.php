@@ -74,11 +74,10 @@ class Menu extends CI_Controller
 
     public function submenu_delete()
     {
-        $query = [
-            'smenu_id' => $this->input->post('smenu_id')
-        ];
+        $id = $this->uri->segment(3);
+        $this->load->model('Menu_model', 'menu');
+        $this->menu->deleteSubMenu($id);
 
-        $this->db->delete('user_sub_menu', $query);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Submenu has been deleted!
           </div>');

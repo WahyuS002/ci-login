@@ -2,7 +2,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Submenu Management</h1>
+                    <h1 class="h3 mb-4 text-gray-800"><?= $title ?></h1>
 
                     <!-- Button trigger modal -->
 
@@ -41,7 +41,7 @@
                                             <td><?= $sm['is_active'] ?></td>
                                             <td>
                                                 <a href="#" class="badge badge-pill badge-success">Edit</a>
-                                                <a href="<?= base_url('menu/submenu_delete?smenu_id=') ?><?= $sm['smenu_id'] ?>" class="badge badge-pill badge-danger">Delete</a>
+                                                <a href="<?= base_url('menu/submenu_delete/') ?><?= $sm['smenu_id'] ?>" class="badge badge-pill badge-danger">Delete</a>
                                             </td>
                                         </tr>
                                         <?php $i++ ?>

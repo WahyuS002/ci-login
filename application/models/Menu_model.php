@@ -11,4 +11,9 @@ class Menu_model extends CI_Model
         ";
         return $this->db->query($query)->result_array();
     }
+
+    public function deleteSubMenu($id)
+    {
+        return $this->db->delete('user_sub_menu', ['smenu_id' => $id]);
+    }
 }
